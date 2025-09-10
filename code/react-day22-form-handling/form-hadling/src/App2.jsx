@@ -31,14 +31,27 @@ const DataHandler = (e) =>{
     console.log(e.target.value);
 
     const{name,value}= e.target;
-    //state update 
-    setFrom({...from,[name ]:value})
 
+    if(e.target.type == 'file'){
+
+    
+
+
+    //state update 
+    setFrom({...from,[name]:e.target.files[0].name})
+    } 
+    else{ 
+      setFrom({...from,[name]:value})
+
+      
     //used to fetch files data
     //it return file list object with file data as an array 0 index
-console.log(e.target.files[0].name);
+//  console.log(e.target.files[0].name );
+    }
+  
 
-}
+
+  }
 
 const saveFrom=(e)=>{
 //e.preventDefault ()
@@ -50,7 +63,8 @@ e.preventDefault()
  
     console.log(from);
 
-    setFrom({userName:"", userEmail:"", userSkill:"", userPass:"",userProfile:""})
+    //from clear
+    setFrom({userName:"", userEmail:"", userSkill:"", userPass:"",userProfile:null})
     
 }
 
