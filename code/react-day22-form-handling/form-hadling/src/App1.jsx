@@ -1,49 +1,47 @@
 import React, { Component } from 'react'
 
-class App3 extends React.Component {
-    constructor(props) {
-        super(props)
-
-
+export default class App1 extends Component {
+    constructor(){
+        super()
         this.state = {
-            userName: "",
-            userEmail: "",
-            userPass: "",
-            userSkill: "",
-            userProfile: null
+            userName:"",
+            userEmail:"",
+            userPass:"",
+            userSkill:"",
+            userProfile:null
         }
     }
 
+    DataHandler = (e) =>{
+        const {name, value, type, files} = e.target;
+        if(type==='file'){
+ this.setState({[name]:files[0]})
 
-    DataHandler = (e) => {
-        const { name, value, type, files } = e.target
-
-        if (type === "file") {
-
-            this.setState({ [name]: files[0].name })
-        } else {
-            this.setState({ [name]: value })
+        } else{
+this.setState({ [name]:value })
         }
     }
 
-    saveForm = (e) => {
+    saveForm = (e)=>{
         e.preventDefault()
-        alert("submitted")
-        console.log(this.state)
-
+        alert("sucess")
+        console.log(this.state);
 
         this.setState({
-            userName: "",
-            userEmail: "",
-            userPass: "",
-            userSkill: "",
-            userProfile: null
+            userName:"",
+            userEmail:"",
+            userPass:"",
+            userSkill:"",
+            userProfile:null
         })
+        
     }
 
-    render() {
-        return (
-            <div className="container-fluid text-dark fw-bold">
+  render() {
+    return (
+      <>
+      
+       <div className="container-fluid text-dark fw-bold">
                 <div className="row">
                     <div className="col-md-12 text-center bg-dark p-3">
                         <h2 className="text-warning">User Registration Form</h2>
@@ -102,7 +100,7 @@ class App3 extends React.Component {
                                 name="userSkill"
                                 required
                             >
-                                <option value="">--Select Skill--</option>
+                                <option value="HTML">--Select Skill--</option>
                                 <option value="HTML">HTML</option>
                                 <option value="CSS">CSS</option>
                                 <option value="JavaScript">JavaScript</option>
@@ -130,8 +128,9 @@ class App3 extends React.Component {
                     </form>
                 </div>
             </div>
-        )
-    }
+      
+      
+      </>
+    )
+  }
 }
-
-export default App3

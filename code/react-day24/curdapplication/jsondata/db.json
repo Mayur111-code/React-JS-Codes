@@ -1,0 +1,28 @@
+{
+  "User": [
+    {
+      "id": "6918",
+      "userName": "Mayur Borse",
+      "userEmail": "mayurborse7440@gmail.com",
+      "userPass": "123",
+      "userAddress": "nashik",
+      "userSkills": "React JS"
+    },
+    {
+      "id": "026a",
+      "userName": "sanket",
+      "userEmail": "sanket@gmail.com",
+      "userPass": "123",
+      "userAddress": "nashik",
+      "userSkills": "React JS"
+    },
+    {
+      "id": "c4dc",
+      "userName": "jay ",
+      "userEmail": "jay@email.com",
+      "userPass": "123",
+      "userAddress": "pune",
+      "userSkills": "React JS"
+    }
+  ]
+}

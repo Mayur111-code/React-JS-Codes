@@ -1,0 +1,16 @@
+@import "tailwindcss";
+/* body{
+    background-color: #111;
+} */
+
+#tasklist {
+  overflow-x: auto;           
+  -webkit-overflow-scrolling: touch; 
+  -ms-overflow-style: none;    
+  scrollbar-width: none;       
+}
+
+
+/* #tasklist::-webkit-scrollbar {
+  display: none;
+} */
